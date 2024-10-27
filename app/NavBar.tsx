@@ -15,7 +15,7 @@ const NavBar = () => {
 	];
 
 	return (
-		<nav className="flex border-b space-x-6 p-5 mb-5 h-14 items-center dark:bg-black">
+		<nav className="flex border-b space-x-6 p-5 mb-5 h-14 items-center">
 			<Link href="/">
 				<FaBug />
 			</Link>
@@ -24,8 +24,8 @@ const NavBar = () => {
 					<Link
 						key={link.href}
 						className={classnames({
-							"text-zinc-500 dark:text-zinc-400": link.href !== currentPath,
-							"text-zinc-900 dark:text-zinc-50": link.href === currentPath,
+							"text-zinc-500": link.href !== currentPath,
+							"text-zinc-900 ": link.href === currentPath,
 							"hover:text-zinc-800 transition-colors": true,
 							"font-semibold": link.href === currentPath
 						})}
